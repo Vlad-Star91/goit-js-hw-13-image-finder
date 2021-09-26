@@ -5,7 +5,7 @@ export default class ApiService {
     constructor() {
         this.search = '';
         this.page = '';
-        this.per_page = '';
+        this.per_page = '12';
     }
     
     async searchImages() {

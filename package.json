@@ -3,20 +3,22 @@
   "version": "1.1.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://goitacademy.github.io/parcel-project-template",
+  "homepage": "https://vlad-star91.github.io/goit-js-hw-13-image-finder",
   "scripts": {
     "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /parcel-project-template/"
+    "build": "parcel build src/*.html --public-url /goit-js-hw-13-image-finder/",
+    "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/goitacademy/parcel-project-template.git"
+    "url": "git+https://github.com/Vlad-Star91/goit-js-hw-13-image-finder.git"
   },
   "keywords": [],
-  "author": "Alexander Repeta <alexander.repeta@gmail.com>",
+  "author": "Vladyslav Starodubets <dp181191svn@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/goitacademy/parcel-project-template/issues"
+    "url": "https://github.com/Vlad-Star91/goit-js-hw-13-image-finder/issues"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.5",
@@ -27,6 +29,7 @@
   },
   "dependencies": {
     "animated-scroll-to": "^2.2.0",
+    "gh-pages": "^3.2.3",
     "lodash.debounce": "^4.0.8"
   }
 }
