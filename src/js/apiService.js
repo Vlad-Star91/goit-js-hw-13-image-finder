@@ -11,7 +11,12 @@ export default class ApiService {
     async searchImages() {
         const url = `${BASE_URL}image_type=photo&orientation=horizontal&q=${this.search}&page=${this.page}&per_page=${this.per_page}&key=${MY_KEY}`
         this.incrementPage();
-        return (await (await fetch(url)).json()).hits;
+        return fetch(url).then(response => response.json()).then(data => {
+            return data.hits;
+        }).catch((error) => {
+            alert({ text: 'Something went wrong. Please try again' })
+            Promise.reject(error);
+        });
     }
    
 incrementPage() {
